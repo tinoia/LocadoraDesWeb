@@ -1,0 +1,25 @@
+/*
+ * style.css 
+ */
+.container, .container-fluid {
+ padding-top: 5px;
+ padding-right: 5px;
+ padding-left: 5px;
+ padding-bottom: 5px;
+ background-color: #FFFFFF;
+}
+.row {
+
+}
+[class*="col-"], header, footer, nav, aside, section, div[role="main"] {
+	text-align: center;
+}
+div[role="main"] {
+ background-color: #f0f0f0;
+}
+
+}
+
+.nav-pills{
+	
+}
