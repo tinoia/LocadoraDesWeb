@@ -14,6 +14,7 @@
                 <th><?= $this->Paginator->sort('data_devolucao') ?></th>
                 <th><?= $this->Paginator->sort('total_pagar') ?></th>
                 <th><?= $this->Paginator->sort('dvds_id_dvd') ?></th>
+                <th><?= $this->Paginator->sort('users_id_user') ?></th>
                 <th class="actions"><?= __('Actions') ?></th>
             </tr>
         </thead>
@@ -25,6 +26,7 @@
                 <td><?= h($rent->data_devolucao) ?></td>
                 <td><?= $this->Number->format($rent->total_pagar) ?></td>
                 <td><?= $this->Number->format($rent->dvds_id_dvd) ?></td>
+                <td><?= $this->Number->format($rent->users_id_user) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $rent->id_rent]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $rent->id_rent]) ?>

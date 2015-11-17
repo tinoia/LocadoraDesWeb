@@ -46,7 +46,7 @@ class DvdsFixture extends TestFixture
             'id_dvd' => 1,
             'nome' => 'Lorem ipsum dolor sit amet',
             'genero' => 'Lorem ipsum dolor sit amet',
-            'ano' => '2015-11-16',
+            'ano' => '2015-11-17',
             'duracao' => 1,
             'imagem' => 'Lorem ipsum dolor sit amet',
             'disponivel' => 1,

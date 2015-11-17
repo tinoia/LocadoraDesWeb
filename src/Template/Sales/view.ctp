@@ -23,8 +23,12 @@
             <td><?= $this->Number->format($sale->dvds_id_dvd) ?></td>
         </tr>
         <tr>
+            <th><?= __('Users Id User') ?></th>
+            <td><?= $this->Number->format($sale->users_id_user) ?></td>
+        </tr>
+        <tr>
             <th><?= __('Data Compra') ?></th>
-            <td><?= h($sale->data_compra) ?></td>
+            <td><?= h($sale->data_compra) ?></tr>
         </tr>
     </table>
 </div>

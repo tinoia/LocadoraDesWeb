@@ -13,6 +13,7 @@
                 <th><?= $this->Paginator->sort('data_compra') ?></th>
                 <th><?= $this->Paginator->sort('total_pagar') ?></th>
                 <th><?= $this->Paginator->sort('dvds_id_dvd') ?></th>
+                <th><?= $this->Paginator->sort('users_id_user') ?></th>
                 <th class="actions"><?= __('Actions') ?></th>
             </tr>
         </thead>
@@ -23,6 +24,7 @@
                 <td><?= h($sale->data_compra) ?></td>
                 <td><?= $this->Number->format($sale->total_pagar) ?></td>
                 <td><?= $this->Number->format($sale->dvds_id_dvd) ?></td>
+                <td><?= $this->Number->format($sale->users_id_user) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $sale->id_sale]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $sale->id_sale]) ?>

@@ -48,6 +48,7 @@ class DvdsController extends AppController
         $dvd = $this->Dvds->newEntity();
         if ($this->request->is('post')) {
             $dvd = $this->Dvds->patchEntity($dvd, $this->request->data);
+            debug($dvd);
             if ($this->Dvds->save($dvd)) {
                 $this->Flash->success(__('The dvd has been saved.'));
                 return $this->redirect(['action' => 'index']);
@@ -88,7 +89,7 @@ class DvdsController extends AppController
      * Delete method
      *
      * @param string|null $id Dvd id.
-     * @return \Cake\Network\Response|null Redirects to index.
+     * @return void Redirects to index.
      * @throws \Cake\Network\Exception\NotFoundException When record not found.
      */
     public function delete($id = null)

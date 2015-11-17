@@ -10,6 +10,7 @@ use Cake\ORM\Entity;
  * @property \Cake\I18n\Time $data_compra
  * @property float $total_pagar
  * @property int $dvds_id_dvd
+ * @property int $users_id_user
  */
 class Sale extends Entity
 {

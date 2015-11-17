@@ -15,7 +15,6 @@
                 <th><?= $this->Paginator->sort('type') ?></th>
                 <th><?= $this->Paginator->sort('phone') ?></th>
                 <th><?= $this->Paginator->sort('password') ?></th>
-                <th><?= $this->Paginator->sort('rents_id_rent') ?></th>
                 <th class="actions"><?= __('Actions') ?></th>
             </tr>
         </thead>
@@ -28,7 +27,6 @@
                 <td><?= h($user->type) ?></td>
                 <td><?= $this->Number->format($user->phone) ?></td>
                 <td><?= h($user->password) ?></td>
-                <td><?= $this->Number->format($user->rents_id_rent) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $user->id_user]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $user->id_user]) ?>

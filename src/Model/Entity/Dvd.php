@@ -9,12 +9,12 @@ use Cake\ORM\Entity;
  * @property int $id_dvd
  * @property string $nome
  * @property string $genero
- * @property \Cake\I18n\Time $ano
- * @property int $duracao
+ * @property string $ano
+ * @property string $duracao
  * @property string|resource $imagem
  * @property bool $disponivel
- * @property int $num_copias
- * @property float $preco
+ * @property string $num_copias
+ * @property string $preco
  */
 class Dvd extends Entity
 {

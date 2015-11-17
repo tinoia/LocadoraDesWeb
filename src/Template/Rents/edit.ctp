@@ -18,6 +18,7 @@
             echo $this->Form->input('data_retirada');
             echo $this->Form->input('data_devolucao');
             echo $this->Form->input('total_pagar');
+            echo $this->Form->input('users_id_user');
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

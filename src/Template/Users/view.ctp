@@ -34,13 +34,5 @@
             <th><?= __('Phone') ?></th>
             <td><?= $this->Number->format($user->phone) ?></td>
         </tr>
-        <tr>
-            <th><?= __('Rents Id Rent') ?></th>
-            <td><?= $this->Number->format($user->rents_id_rent) ?></td>
-        </tr>
-        <tr>
-            <th><?= __('Sales Id Sale') ?></th>
-            <td><?= $this->Number->format($user->sales_id_sale) ?></td>
-        </tr>
     </table>
 </div>

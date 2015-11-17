@@ -61,6 +61,11 @@ class RentsTable extends Table
             ->add('dvds_id_dvd', 'valid', ['rule' => 'numeric'])
             ->allowEmpty('dvds_id_dvd', 'create');
 
+        $validator
+            ->add('users_id_user', 'valid', ['rule' => 'numeric'])
+            ->requirePresence('users_id_user', 'create')
+            ->notEmpty('users_id_user');
+
         return $validator;
     }
 }

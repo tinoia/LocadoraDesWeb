@@ -21,6 +21,29 @@ class UsersController extends AppController
         $this->set('users', $this->paginate($this->Users));
         $this->set('_serialize', ['users']);
     }
+    
+    public function beforeFilter(\Cake\Event\Event $event)
+    {
+        $this->Auth->allow('add');
+
+    }
+
+    
+    public function login() {
+        $this->viewBuilder()->layout(false);
+        if ($this->request->is('post')) {
+            $user = $this->Auth->identify();
+            if ($user) {
+                $this->Auth->setUser($user);
+                return $this->redirect($this->Auth->redirectUrl());
+            }
+            $this->Flash->error(__('Usuário ou senha invalidos'));
+        }
+    }
+
+    public function logout() {
+        $this->redirect($this->Auth->logout());
+    }
 
     /**
      * View method
@@ -88,7 +111,7 @@ class UsersController extends AppController
      * Delete method
      *
      * @param string|null $id User id.
-     * @return \Cake\Network\Response|null Redirects to index.
+     * @return void Redirects to index.
      * @throws \Cake\Network\Exception\NotFoundException When record not found.
      */
     public function delete($id = null)

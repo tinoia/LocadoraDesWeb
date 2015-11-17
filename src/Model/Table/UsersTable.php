@@ -26,7 +26,7 @@ class UsersTable extends Table
 
         $this->table('users');
         $this->displayField('name');
-        $this->primaryKey(['id_user', 'rents_id_rent', 'sales_id_sale']);
+        $this->primaryKey(['id_user']);
 
     }
 
@@ -63,14 +63,6 @@ class UsersTable extends Table
         $validator
             ->requirePresence('password', 'create')
             ->notEmpty('password');
-
-        $validator
-            ->add('rents_id_rent', 'valid', ['rule' => 'numeric'])
-            ->allowEmpty('rents_id_rent', 'create');
-
-        $validator
-            ->add('sales_id_sale', 'valid', ['rule' => 'numeric'])
-            ->allowEmpty('sales_id_sale', 'create');
 
         return $validator;
     }

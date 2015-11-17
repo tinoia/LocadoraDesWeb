@@ -21,12 +21,15 @@ class SalesFixture extends TestFixture
         'data_compra' => ['type' => 'date', 'length' => null, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null],
         'total_pagar' => ['type' => 'float', 'length' => null, 'precision' => null, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => ''],
         'dvds_id_dvd' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
+        'users_id_user' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
         '_indexes' => [
             'fk_sales_dvds1_idx' => ['type' => 'index', 'columns' => ['dvds_id_dvd'], 'length' => []],
+            'fk_sales_users1_idx' => ['type' => 'index', 'columns' => ['users_id_user'], 'length' => []],
         ],
         '_constraints' => [
             'primary' => ['type' => 'primary', 'columns' => ['id_sale', 'dvds_id_dvd'], 'length' => []],
             'fk_sales_dvds1' => ['type' => 'foreign', 'columns' => ['dvds_id_dvd'], 'references' => ['dvds', 'id_dvd'], 'update' => 'noAction', 'delete' => 'noAction', 'length' => []],
+            'fk_sales_users1' => ['type' => 'foreign', 'columns' => ['users_id_user'], 'references' => ['users', 'id_user'], 'update' => 'noAction', 'delete' => 'noAction', 'length' => []],
         ],
         '_options' => [
             'engine' => 'InnoDB',
@@ -43,9 +46,10 @@ class SalesFixture extends TestFixture
     public $records = [
         [
             'id_sale' => 1,
-            'data_compra' => '2015-11-16',
+            'data_compra' => '2015-11-17',
             'total_pagar' => 1,
-            'dvds_id_dvd' => 1
+            'dvds_id_dvd' => 1,
+            'users_id_user' => 1
         ],
     ];
 }

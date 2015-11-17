@@ -88,7 +88,7 @@ class RentsController extends AppController
      * Delete method
      *
      * @param string|null $id Rent id.
-     * @return \Cake\Network\Response|null Redirects to index.
+     * @return void Redirects to index.
      * @throws \Cake\Network\Exception\NotFoundException When record not found.
      */
     public function delete($id = null)

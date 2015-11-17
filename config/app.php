@@ -216,7 +216,7 @@ return [
              */
             //'port' => 'nonstandard_port_number',
             'username' => 'root',
-            'password' => '',
+            'password' => '16521652',
             'database' => 'videolocadoradb',
             'encoding' => 'utf8',
             'timezone' => 'UTC',

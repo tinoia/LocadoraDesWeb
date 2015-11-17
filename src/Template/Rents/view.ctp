@@ -23,12 +23,16 @@
             <td><?= $this->Number->format($rent->dvds_id_dvd) ?></td>
         </tr>
         <tr>
+            <th><?= __('Users Id User') ?></th>
+            <td><?= $this->Number->format($rent->users_id_user) ?></td>
+        </tr>
+        <tr>
             <th><?= __('Data Retirada') ?></th>
-            <td><?= h($rent->data_retirada) ?></td>
+            <td><?= h($rent->data_retirada) ?></tr>
         </tr>
         <tr>
             <th><?= __('Data Devolucao') ?></th>
-            <td><?= h($rent->data_devolucao) ?></td>
+            <td><?= h($rent->data_devolucao) ?></tr>
         </tr>
     </table>
 </div>
